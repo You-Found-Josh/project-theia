@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [FeatherDaughterBoard.PcbDoc]
+   Generated File[FeatherDaughterBoard.TXT]
+   Generated File[FeatherDaughterBoard.LDP]
+   Generated File[FeatherDaughterBoard.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 11:31:23 AM On 6/3/2020

@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: FeatherDaughterBoard.PcbDoc   6/3/2020  11:31:23 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : FeatherDaughterBoard.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      26mil (0.65mm)                                            Round             12        PTH        0.00inch (0.00mm)
+T2      33mil (0.85mm)                                            Round             22        PTH        0.00inch (0.00mm)
+T3      35mil (0.9mm)                                             Round             39        PTH        0.00inch (0.00mm)
+T4      40mil (1.02mm)                                            Round             22        PTH        0.00inch (0.00mm)
+T5      100mil (2.54mm)                                           Round             4         PTH        0.00inch (0.00mm)
+T6      125mil (3.175mm)                                          Round             4         PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              103
+
+Total Processing Time (hh:mm:ss) : 00:00:00

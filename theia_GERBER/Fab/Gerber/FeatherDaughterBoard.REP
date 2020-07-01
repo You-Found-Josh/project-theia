@@ -1,0 +1,308 @@
+*************************************************************
+FileName = FeatherDaughterBoard.GBR
+AutoAperture = True
+*************************************************************
+Generating : Drill Drawing
+      File : FeatherDaughterBoard.GD1
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+    D41
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : FeatherDaughterBoard.GG1
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+    D41
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : FeatherDaughterBoard.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : FeatherDaughterBoard.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : FeatherDaughterBoard.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : FeatherDaughterBoard.GBO
+
+    Adding Layer      : Bottom Overlay
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : FeatherDaughterBoard.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : FeatherDaughterBoard.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : FeatherDaughterBoard.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Internal Layer 2
+      File : FeatherDaughterBoard.G2
+
+    Adding Layer      : Internal Layer 2
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Internal Layer 1
+      File : FeatherDaughterBoard.G1
+
+    Adding Layer      : Internal Layer 1
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : FeatherDaughterBoard.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Board
+
+    Adding Layer      : Assembly Notes
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D16
+    D17
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+*************************************************************
+
