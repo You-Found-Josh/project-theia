@@ -45,11 +45,13 @@ class LoRaRcvCont(LoRa):
     def on_rx_done(self):
         # current date and time
         now = datetime.now()
+        current_utc = datetime.utcnow()
         format = "%a %b %d %H:%M:%S %Y"    
 
         self.clear_irq_flags(RxDone=1)
         payload = self.read_payload(nocheck=True)
         dateTimeObj = datetime.now()
+        shortUTCTime = current_utc.strftime(format)
         shortTime = now.strftime(format)
 
         dataPayload = bytes(payload).decode("utf-8", errors='ignore').strip().strip('\x00')
@@ -63,6 +65,7 @@ class LoRaRcvCont(LoRa):
         print("Unit ID: ",unitID)  
         print("Body Temperature: ",celcius,"C")  
         print("Body Temperature: ",fahrenheit,"F")
+        print("Current UTC Time: ", shortUTCTime)
         print('\n')
 
         if header == unitTrigger:
@@ -73,7 +76,7 @@ class LoRaRcvCont(LoRa):
                       "tags": {
                           "Unit ID": unitID,
                       },
-                      "time": time.ctime(),
+                      "time": shortUTCTime,
                       "fields": {
                           "temperature_c": celcius,
                           "temperature_f": fahrenheit,
