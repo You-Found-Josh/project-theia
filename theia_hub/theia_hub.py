@@ -12,7 +12,7 @@ host = 'localhost' # My Ubuntu NUC
 port = 8086 # default port
 user = 'admin' # the user/password created for the pi, with write access
 password = '<password>' #your password - DON'T FORGET TO UPDATE!
-dbname = 'overwatch' # the database we created earlier
+dbname = 'theia' # the database we created earlier
 interval = 60 # Sample period in seconds
 
 dataPayload = 0
@@ -70,7 +70,7 @@ class LoRaRcvCont(LoRa):
 
         if header == unitTrigger:
                 print ("Unit Number:" unitID "detected")
-                overwatch = [
+                theia = [
                 {
                   "measurement": "sensor_data",
                       "tags": {

@@ -67,7 +67,7 @@
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"temperature_c\" FROM \"overwatch\"",
-          "rawQuery": true,
+          "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
@@ -90,8 +90,8 @@
           "fill": true,
           "line": true,
           "op": "gt",
-          "value": 37,
-          "yaxis": "left"
+          "value": 37.2,
+          "yaxis": "right"
         }
       ],
       "timeFrom": null,
@@ -137,14 +137,16 @@
     {
       "cacheTimeout": null,
       "colorBackground": false,
+      "colorPostfix": false,
       "colorPrefix": false,
       "colorValue": true,
       "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
+        "#5794F2",
+        "#FA6400",
+        "#C4162A"
       ],
       "datasource": "Overwatch",
+      "decimals": null,
       "format": "fahrenheit",
       "gauge": {
         "maxValue": 100,
@@ -178,9 +180,9 @@
       "nullText": null,
       "options": {},
       "postfix": "",
-      "postfixFontSize": "50%",
+      "postfixFontSize": "20%",
       "prefix": "",
-      "prefixFontSize": "50%",
+      "prefixFontSize": "20%",
       "rangeMaps": [
         {
           "from": "null",
@@ -218,12 +220,12 @@
           "tags": []
         }
       ],
-      "thresholds": "95,98",
+      "thresholds": "97,99",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Current Temperature F",
+      "title": "Last Temp F",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "110%",
       "valueMaps": [
         {
           "op": "=",
@@ -239,9 +241,9 @@
       "colorPrefix": false,
       "colorValue": true,
       "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
+        "#5794F2",
+        "#FA6400",
+        "#C4162A"
       ],
       "datasource": "Overwatch",
       "format": "celsius",
@@ -319,12 +321,12 @@
           "tags": []
         }
       ],
-      "thresholds": "35,37",
+      "thresholds": "36.1,37.2",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Current Temperature C",
+      "title": "Last Temp C",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "110%",
       "valueMaps": [
         {
           "op": "=",
@@ -336,6 +338,7 @@
     },
     {
       "datasource": "Overwatch",
+      "description": "Mean temperature of the entire community, in Celcius. ",
       "gridPos": {
         "h": 3,
         "w": 10,
@@ -369,12 +372,12 @@
                 "value": null
               },
               {
-                "color": "semi-dark-orange",
-                "value": 37
+                "color": "dark-orange",
+                "value": 36.1
               },
               {
                 "color": "dark-red",
-                "value": 39
+                "value": 37.2
               }
             ],
             "unit": "celsius"
@@ -409,11 +412,12 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Mean Average Temperature in C",
+      "title": "Community Temperature in C",
       "type": "bargauge"
     },
     {
       "datasource": "Overwatch",
+      "description": "The mean temperature of the entire community in Fahrenheit. ",
       "gridPos": {
         "h": 3,
         "w": 10,
@@ -447,12 +451,12 @@
                 "value": null
               },
               {
-                "color": "semi-dark-orange",
-                "value": 98
+                "color": "dark-orange",
+                "value": 97
               },
               {
                 "color": "dark-red",
-                "value": 102
+                "value": 99
               }
             ],
             "unit": "fahrenheit"
@@ -487,8 +491,84 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Mean Average Temperature in F",
+      "title": "Community Temperature in F",
       "type": "bargauge"
+    },
+    {
+      "cards": {
+        "cardPadding": 1,
+        "cardRound": 0
+      },
+      "color": {
+        "cardColor": "#b4ff00",
+        "colorScale": "sqrt",
+        "colorScheme": "interpolateOrRd",
+        "exponent": 0.5,
+        "mode": "spectrum"
+      },
+      "dataFormat": "timeseries",
+      "datasource": "Overwatch",
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 9
+      },
+      "heatmap": {},
+      "hideZeroBuckets": false,
+      "highlightCards": true,
+      "id": 10,
+      "legend": {
+        "show": true
+      },
+      "options": {},
+      "reverseYBuckets": false,
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "overwatch",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "temperature_c"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Data Heatmap",
+      "tooltip": {
+        "show": true,
+        "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+        "show": true
+      },
+      "xBucketNumber": null,
+      "xBucketSize": null,
+      "yAxis": {
+        "decimals": null,
+        "format": "celsius",
+        "logBase": 1,
+        "max": "44",
+        "min": "20",
+        "show": true,
+        "splitFactor": null
+      },
+      "yBucketBound": "auto",
+      "yBucketNumber": null,
+      "yBucketSize": 5
     }
   ],
   "refresh": "10s",
@@ -519,5 +599,5 @@
   "timezone": "browser",
   "title": "Theia Dashboard",
   "uid": "8etjSHggk",
-  "version": 39
+  "version": 65
 }
