@@ -212,10 +212,6 @@
                   "temperature_f"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [],
-                "type": "distinct"
               }
             ]
           ],
@@ -317,10 +313,6 @@
                   "temperature_c"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [],
-                "type": "distinct"
               }
             ]
           ],
@@ -527,5 +519,5 @@
   "timezone": "browser",
   "title": "Theia Dashboard",
   "uid": "8etjSHggk",
-  "version": 37
+  "version": 39
 }
