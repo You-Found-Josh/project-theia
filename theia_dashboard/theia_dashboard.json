@@ -23,7 +23,13 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Overwatch",
+      "datasource": "Theia",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fill": 2,
       "fillGradient": 6,
       "gridPos": {
@@ -63,7 +69,7 @@
           "alias": "Temperature C",
           "groupBy": [],
           "hide": false,
-          "measurement": "overwatch",
+          "measurement": "theia",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT \"temperature_c\" FROM \"overwatch\"",
@@ -145,8 +151,14 @@
         "#FA6400",
         "#C4162A"
       ],
-      "datasource": "Overwatch",
+      "datasource": "Theia",
       "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "fahrenheit",
       "gauge": {
         "maxValue": 100,
@@ -178,7 +190,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "postfix": "",
       "postfixFontSize": "20%",
       "prefix": "",
@@ -202,7 +213,7 @@
       "targets": [
         {
           "groupBy": [],
-          "measurement": "overwatch",
+          "measurement": "theia",
           "orderByTime": "ASC",
           "policy": "autogen",
           "refId": "A",
@@ -245,7 +256,13 @@
         "#FA6400",
         "#C4162A"
       ],
-      "datasource": "Overwatch",
+      "datasource": "Theia",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "celsius",
       "gauge": {
         "maxValue": 100,
@@ -277,7 +294,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -301,7 +317,7 @@
       "targets": [
         {
           "groupBy": [],
-          "measurement": "overwatch",
+          "measurement": "theia",
           "orderByTime": "ASC",
           "policy": "autogen",
           "query": "SELECT \"temperature_c\" FROM \"autogen\".\"overwatch\" WHERE $timeFilter",
@@ -337,36 +353,30 @@
       "valueName": "current"
     },
     {
-      "datasource": "Overwatch",
+      "datasource": "Theia",
       "description": "Mean temperature of the entire community, in Celcius. ",
-      "gridPos": {
-        "h": 3,
-        "w": 10,
-        "x": 14,
-        "y": 3
-      },
-      "id": 7,
-      "options": {
-        "displayMode": "lcd",
-        "fieldOptions": {
-          "calcs": [
-            "mean"
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {},
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "operator": "",
+              "text": "Above Average",
+              "to": "",
+              "type": 1,
+              "value": "37"
+            }
           ],
-          "defaults": {
-            "mappings": [
-              {
-                "from": "",
-                "id": 1,
-                "operator": "",
-                "text": "Above Average",
-                "to": "",
-                "type": 1,
-                "value": "37"
-              }
-            ],
-            "max": 43,
-            "min": 20,
-            "thresholds": [
+          "max": 43,
+          "min": 20,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
               {
                 "color": "green",
                 "value": null
@@ -379,20 +389,37 @@
                 "color": "dark-red",
                 "value": 37.2
               }
-            ],
-            "unit": "celsius"
+            ]
           },
-          "override": {},
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 10,
+        "x": 14,
+        "y": 3
+      },
+      "id": 7,
+      "options": {
+        "displayMode": "lcd",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
           "values": false
         },
-        "orientation": "horizontal"
+        "showUnfilled": true
       },
-      "pluginVersion": "6.5.2",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "alias": "Mean C Temperature",
           "groupBy": [],
-          "measurement": "overwatch",
+          "measurement": "theia",
           "orderByTime": "ASC",
           "policy": "autogen",
           "refId": "A",
@@ -416,36 +443,30 @@
       "type": "bargauge"
     },
     {
-      "datasource": "Overwatch",
+      "datasource": "Theia",
       "description": "The mean temperature of the entire community in Fahrenheit. ",
-      "gridPos": {
-        "h": 3,
-        "w": 10,
-        "x": 14,
-        "y": 6
-      },
-      "id": 8,
-      "options": {
-        "displayMode": "lcd",
-        "fieldOptions": {
-          "calcs": [
-            "mean"
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {},
+          "mappings": [
+            {
+              "from": "98",
+              "id": 1,
+              "operator": "",
+              "text": "Above Average",
+              "to": "110",
+              "type": 2,
+              "value": "98"
+            }
           ],
-          "defaults": {
-            "mappings": [
-              {
-                "from": "98",
-                "id": 1,
-                "operator": "",
-                "text": "Above Average",
-                "to": "110",
-                "type": 2,
-                "value": "98"
-              }
-            ],
-            "max": 110,
-            "min": 68,
-            "thresholds": [
+          "max": 110,
+          "min": 68,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
               {
                 "color": "green",
                 "value": null
@@ -458,20 +479,37 @@
                 "color": "dark-red",
                 "value": 99
               }
-            ],
-            "unit": "fahrenheit"
+            ]
           },
-          "override": {},
+          "unit": "fahrenheit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 10,
+        "x": 14,
+        "y": 6
+      },
+      "id": 8,
+      "options": {
+        "displayMode": "lcd",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
           "values": false
         },
-        "orientation": "horizontal"
+        "showUnfilled": true
       },
-      "pluginVersion": "6.5.2",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "alias": "Mean F Temperature",
           "groupBy": [],
-          "measurement": "overwatch",
+          "measurement": "theia",
           "orderByTime": "ASC",
           "policy": "autogen",
           "refId": "A",
@@ -507,7 +545,13 @@
         "mode": "spectrum"
       },
       "dataFormat": "timeseries",
-      "datasource": "Overwatch",
+      "datasource": "Theia",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 5,
         "w": 24,
@@ -521,12 +565,11 @@
       "legend": {
         "show": true
       },
-      "options": {},
       "reverseYBuckets": false,
       "targets": [
         {
           "groupBy": [],
-          "measurement": "overwatch",
+          "measurement": "theia",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -572,7 +615,7 @@
     }
   ],
   "refresh": "10s",
-  "schemaVersion": 21,
+  "schemaVersion": 25,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -584,7 +627,6 @@
   },
   "timepicker": {
     "refresh_intervals": [
-      "5s",
       "10s",
       "30s",
       "1m",
@@ -599,5 +641,5 @@
   "timezone": "browser",
   "title": "Theia Dashboard",
   "uid": "8etjSHggk",
-  "version": 65
+  "version": 3
 }
